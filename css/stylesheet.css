@@ -1,3 +1,80 @@
 @charset "utf-8";
-/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*############################## GENERAL ##############################*/
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
+}
+
+.flexRowCenter{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+/*############################## MENU ##############################*/
+menu {
+	width: 1100px;
+	height: 32px;
+	z-index: 100;
+	position: absolute;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+#menu-logo {
+	width: 32px;
+	height: inherit;
+}
+
+#menu-links{
+	height: inherit;
+	float: right;
+}
+
+#menu-links div {
+	
+	text-align: center;
+}
+#menu-links P {
+	margin: auto 20px;
+}
+#menu-hamburger {
+	height: inherit;
+	display: none;
+}
+
+.link-format{
+	font-family: 'Barlow Condensed';
+	font-size: 16px;
+	font-weight: 600;
+}
+
+/*############################## MAIN ##############################*/
+
+main{
+	width:1440px;
+	height: 800px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+main > div{
+	width: 50%;
+	height: inherit;
+}
+
+#main-content{
+	background-color: aqua;
+}
+
+#main-image{
+	background-color: brown;
+}
+
+
 

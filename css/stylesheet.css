@@ -17,6 +17,33 @@ body {
 	flex-direction: row;
 	align-items: center;
 }
+
+.flexColumnCenter{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+}
+
+.flexRowStart{
+	display: flex;
+	flex-direction:row;
+	justify-content: flex-start;
+	align-items:center;
+}
+.flexCenterCenter{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.greyLink{
+	color:hsl(231, 7%, 65%);
+}
+
+.blackLink{
+	color:black;
+}
+
 /*############################## MENU ##############################*/
 menu {
 	width: 1100px;
@@ -49,9 +76,7 @@ menu {
 }
 
 .link-format{
-	font-family: 'Barlow Condensed';
-	font-size: 16px;
-	font-weight: 600;
+	font: 600 16px/1 'Barlow Condensed';
 }
 
 /*############################## MAIN ##############################*/
@@ -64,17 +89,87 @@ main{
 	align-items: center;
 }
 main > div{
-	width: 50%;
+	width: 720px;
 	height: inherit;
 }
 
-#main-content{
-	background-color: aqua;
+/*############################## MAIN-CONTENT ##############################*/
+
+#content-paragraph{
+	width:500px;
+	height: 455px;
+	display: flex;
+	flex-direction: column;
+	margin: 220px auto auto 190px;
 }
 
-#main-image{
-	background-color: brown;
+#parag-new{
+	height: 25px;
+	margin-top: 40px;
 }
 
+#new-deco{
+	width: 50px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(230, 29%, 20%);
+	border-radius: 12px;
+	color: white;
+	font: 600 16px/30px 'Barlow Condensed';
+	margin-right: 15px;
+}
 
+#parag-large-text{
+	height: 120px;
+	color: hsl(230, 29%, 20%);
+	font: 700 62px/1 'Barlow Condensed';
+	margin-top: 15px;
+}
+
+#para-short-text{
+	width: 270px;
+	height: 60px;
+	font: 400 17px/1.4 'barlow';
+	color:hsl(230, 11%, 40%);
+	margin-top: 35px;
+}
+
+#para-bottom{
+	margin-top: 65px;
+}
+
+#schedule-bt{
+	width: 185px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: hsl(0, 100%, 68%);
+	color:white;
+	font: 700 18px 'Barlow Condensed';
+	margin-right: 25px;
+}
+.default-text{
+	color: hsl(231, 7%, 65%);
+	font: 400 16px 'Barlow Condensed';
+	letter-spacing: 5px;
+}
+
+/*############################## MAIN-IMAGE ##############################*/
+
+#image-grey-back{
+	width:inherit;
+	height: 425px;
+	background-color: hsl(207, 33%, 95%);
+	border-bottom-left-radius: 80px;
+}
+
+#image-devices{
+	width:690px;
+	height: 455px;
+	position:absolute;
+	z-index: 100;
+	margin: 220px auto auto 30px;
+	background: url("../images/illustration-devices.svg");
+}
 

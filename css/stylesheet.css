@@ -1,7 +1,5 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 /*############################## GENERAL ##############################*/
 body {
 	display: flex;
@@ -11,71 +9,72 @@ body {
 	padding: 0px;
 	height: 100vh;
 }
-
-.flexRowCenter{
+.flexRowCenter {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-
-.flexColumnCenter{
+.flexColumnCenter {
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 	align-items: center;
 }
-
-.flexRowStart{
+.flexRowStart {
 	display: flex;
-	flex-direction:row;
+	flex-direction: row;
 	justify-content: flex-start;
-	align-items:center;
+	align-items: center;
 }
-.flexCenterCenter{
+.flexCenterCenter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
-.greyLink{
-	color:hsl(231, 7%, 65%);
-}
-
-.blackLink{
-	color:black;
-}
-
 /*############################## MENU ##############################*/
 menu {
 	width: 1100px;
 	height: 32px;
-	z-index: 100;
+	z-index: 200;
 	position: absolute;
 	justify-content: space-between;
 	margin-top: 60px;
 	padding: 0px;
 }
-
-article{
-	margin-top: 60px;
-	height: 32px;
-	z-index: 100;
+#menu-mobile {
 	position: absolute;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 1100px;
+	z-index: 300px;
+	top: 70px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	height: 225px;
+	width: 410px;
+	background-color: white;
+	box-shadow: -5px 5px 50px -30px black;
 }
-
+#menu-mobile > div {
+	width: 340px;
+	text-align: center;
+}
+#link-mb-product {
+	margin-top: 10px;
+}
+#link-mb-pricing {
+	margin-bottom: 10px;
+}
+#link-mb-login {
+	margin-top: 10px;
+	height: 90px;
+	border-top: solid 1px hsl(231, 7%, 65%);
+}
 #menu-logo {
 	width: 32px;
 	height: inherit;
 }
-
-#menu-links{
+#menu-links {
 	height: inherit;
 	float: right;
 }
-
 #menu-links div {
 	text-align: center;
 }
@@ -86,44 +85,65 @@ article{
 	width: 24px;
 	height: 24px;
 	display: none;
-	background: url("../images/icon-hamburger.svg") center 100% no-repeat;
 	justify-content: center;
 }
 
-.link-format{
-	font: 600 16px/1 'Barlow Condensed';
+#menu-hamburger:hover{
+	cursor: pointer;
 }
 
-/*############################## MAIN ##############################*/
+.hamburger-icon{
+	background: url("../images/icon-hamburger.svg") center 100% no-repeat;
+}
 
-main{
-	width:1440px;
+.close-icon{
+	background: url("../images/icon-close.svg") center 100% no-repeat;
+}
+
+.link-desk-format {
+	font: 600 16px/1 'Barlow Condensed';
+}
+.link-mb-format {
+	font: 600 19px/1 'Barlow Condensed';
+}
+.greyLink {
+	color: hsl(231, 7%, 65%);
+}
+.blackLink {
+	color: black;
+}
+.link:hover, .link:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.link-mb-container {
+	height: 45px;
+}
+/*############################## MAIN ##############################*/
+main {
+	width: 1440px;
 	height: 800px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-main > div{
+main > div {
 	width: 720px;
 	height: inherit;
 }
-
 /*############################## MAIN-CONTENT ##############################*/
-
-#content-paragraph{
-	width:500px;
+#content-paragraph {
+	width: 500px;
 	height: 455px;
 	display: flex;
 	flex-direction: column;
 	margin: 220px auto auto 175px;
 }
-
-#parag-new{
+#parag-new {
 	height: 25px;
 	margin-top: 40px;
 }
-
-#new-deco{
+#new-deco {
 	width: 50px;
 	height: 25px;
 	display: flex;
@@ -135,75 +155,105 @@ main > div{
 	font: 600 16px/30px 'Barlow Condensed';
 	margin-right: 15px;
 }
-
-#parag-large-text{
+#parag-large-text {
 	height: 120px;
 	color: hsl(230, 29%, 20%);
 	font: 700 62px/1 'Barlow Condensed';
 	margin-top: 15px;
 }
-
-#para-short-text{
+#para-short-text {
 	width: 270px;
 	height: 60px;
 	font: 400 17px/1.4 'barlow';
-	color:hsl(230, 11%, 40%);
+	color: hsl(230, 11%, 40%);
 	margin-top: 35px;
 }
-
-#para-bottom{
+#para-bottom {
 	margin-top: 65px;
 }
-
-#schedule-bt{
+#schedule-bt {
 	width: 185px;
 	height: 40px;
 	border-radius: 5px;
 	background-color: hsl(0, 100%, 68%);
-	color:white;
-	font: 700 18px 'Barlow Condensed';
+	color: white;
+	font: 600 18px 'Barlow Condensed';
 	margin-right: 25px;
 }
-.default-text{
+.default-text {
 	color: hsl(231, 7%, 65%);
 	font: 400 16px 'Barlow Condensed';
 	letter-spacing: 5px;
 }
-
+#schedule-bt:hover{
+	cursor:pointer;
+	background-color: hsla(0, 100%, 68%,0.7);
+}
 /*############################## MAIN-IMAGE ##############################*/
-
-#image-grey-back{
-	width:inherit;
+#image-grey-back {
+	width: inherit;
 	height: 425px;
 	background-color: hsl(207, 33%, 95%);
 	border-bottom-left-radius: 80px;
 }
-
-#image-devices{
-	width:690px;
+#image-devices {
+	width: 690px;
 	height: 455px;
-	position:absolute;
+	position: absolute;
 	z-index: 100;
 	margin: 220px auto auto 30px;
-	background: url("../images/illustration-devices.svg");
+	background: url("../images/illustration-devices.svg") no-repeat;
 }
-
 @media screen and (max-width: 480px) {
-menu {
-	width: 380px;
-	margin-top: 40px;
+	menu {
+		width: 380px;
+		margin-top: 40px;
+	}
+	#menu-links {
+		display: none;
+	}
+	#menu-hamburger {
+		display: flex;
+	}
+	/*############################## MAIN ##############################*/
+	main {
+		width: 480px;
+		height: 990px;
+		flex-direction: column-reverse;
+	}
+	main > div {
+		width: 480px;
+	}
+	/*############################## MAIN-IMAGE ##############################*/
+	#image-grey-back {
+		width: 240px;
+		height: 435px;
+		margin-left: 240px;
+	}
+	#image-devices {
+		width: 480px;
+		height: 238px;
+		margin: 125px auto auto 30px;
+		background-size: 492px;
+	}
+	/*############################## MAIN-CONTENT ##############################*/
+	#content-paragraph {
+		width: 410px;
+		height: 455px;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+	}
+	#parag-new {
+		height: 25px;
+		margin-top: 40px;
+	}
+	#parag-large-text {
+		height: 90px;
+		font: 700 45px/1 'Barlow Condensed';
+		margin-top: 15px;
+	}
+	#para-bottom {
+		margin-top: 35px;
+	}
 }
-
-#menu-links{
-	display: none;
-}
-
-#menu-hamburger {
-	display: flex;
-}
-
-.link-format{
-	font: 600 16px/1 'Barlow Condensed';
-}
-}
-
